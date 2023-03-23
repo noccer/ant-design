@@ -41,6 +41,7 @@
   "unpkg": "dist/antd.min.js",
   "typings": "lib/index.d.ts",
   "scripts": {
+    "niall": "babel ./components --out-dir ./niall --extensions \".ts,.tsx\" --config-file ./buildTools/starters/.babelrc",
     "api-collection": "antd-tools run api-collection",
     "authors": "git log --format='%aN <%aE>' | sort -u | grep -v 'users.noreply.github.com' | grep -v 'gitter.im' | grep -v '.local>' | grep -v 'alibaba-inc.com' | grep -v 'alipay.com' | grep -v 'taobao.com' > AUTHORS.txt",
     "build": "npm run compile && npm run dist",
@@ -146,6 +147,10 @@
   "devDependencies": {
     "@ant-design/colors": "^3.2.2",
     "@ant-design/tools": "^9.0.1",
+    "@babel/cli": "^7.21.0",
+    "@babel/plugin-proposal-decorators": "^7.21.0",
+    "@babel/plugin-syntax-decorators": "^7.21.0",
+    "@babel/preset-typescript": "^7.21.0",
     "@qixian.cs/github-contributors-list": "^1.0.3",
     "@sentry/browser": "^5.4.0",
     "@stackblitz/sdk": "^1.3.0",
